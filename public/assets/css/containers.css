@@ -1,0 +1,878 @@
+.croppie-container .cr-viewport, .croppie-container .cr-resizer {
+    border: none;
+    box-shadow: 0px 0px 2000px 2000px rgba(255, 255, 255, 0.1), 0px 0px 2000px 2000px rgba(0, 0, 0, 0.8);
+    transition: background 0.2s;
+}
+
+.croppie-container .cr-viewport:focus-visible, .croppie-container .cr-resizer:focus-visible {
+    background: rgba(255, 255, 255, 0.1);
+    outline: none;
+}
+
+.simplebar-track {
+    border-radius: 8px;
+    pointer-events: all;
+}
+
+.simplebar-track.simplebar-horizontal {
+    bottom: 8px;
+    height: 8px;
+    left: 8px;
+    right: 8px;
+}
+
+.simplebar-track.simplebar-vertical {
+    bottom: 8px;
+    right: 8px;
+    top: 8px;
+    width: 8px;
+}
+
+.simplebar-track.simplebar-horizontal .simplebar-scrollbar:before, .simplebar-track.simplebar-vertical .simplebar-scrollbar:before {
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+}
+
+.simplebar-scrollbar:before {
+    border-radius: 8px;
+    transition-duration: 0.1s;
+}
+
+.simplebar-scrollbar.simplebar-visible:before {
+    opacity: 0.4;
+    transition-duration: 0.1s;
+}
+
+.simplebar-scrollbar.simplebar-hover:before {
+    cursor: default;
+    opacity: 0.5;
+}
+
+.simplebar-dragging .simplebar-scrollbar.simplebar-hover:before {
+    opacity: 0.6;
+}
+
+html body {
+    margin: 0px;
+    min-width: 256px;
+    width: 100%;
+}
+
+#curtain, #loading-screen {
+    bottom: 0;
+    height: 100%;
+    left: 0px;
+    overflow: auto;
+    position: fixed;
+    width: 100%;
+    z-index: 4;
+}
+
+#curtain {
+    display: none;
+}
+
+.blur {
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: fade-in;
+    animation-name: fade-in;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(0, 0, 0, 0.8);
+    display: table;
+    height: 100%;
+    min-width: 256px;
+    width: 100%;
+}
+
+#containers, #spinner-container {
+    display: table-cell;
+    padding: 16px;
+    vertical-align: middle;
+}
+
+#spinner-container {
+    text-align: center;
+}
+
+#spinner-container img {
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: grow;
+    animation-name: grow;
+    height: 96px;
+    pointer-events: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+}
+
+#containers > div, #containers nav {
+    -webkit-animation-duration: 0.2s;
+    animation-duration: 0.2s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-name: grow;
+    animation-name: grow;
+    background: #FFFFFF;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin: auto;
+    overflow: hidden;
+}
+
+#containers > div {
+    display: block;
+    max-width: 480px;
+    text-align: center;
+}
+
+#containers nav {
+    display: none;
+    max-width: 420px;
+}
+
+#containers > div > a, #containers > div > button, #containers form > a, #containers form button, #containers nav button, #containers input[type="file"] + label, #containers nav a, .friends-list div button, #books-review-form > div .simplebar-content > div {
+    background: none;
+    border: none;
+    border-top: 1px solid #CCCCCC;
+    font-family: "Jost";
+    font-size: 18px;
+    font-weight: 400;
+    margin: 0px;
+    padding: 12px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 100%;
+    word-break: break-word;
+}
+
+#containers > div > a, #containers > div > button, #containers form > a, #containers form button, #containers nav button, #containers input[type="file"] + label, #containers nav a, .friends-list div button {
+    cursor: pointer;
+    font-size: 18px !important;
+    margin-left: 0px !important;
+    transition: background 0.2s, color 0.2s;
+}
+
+#containers > div > button, #containers form button, #containers nav button, #containers input[type="file"] + label, #containers nav a, .friends-list div button, #books-review-form > div .simplebar-content > div {
+    color: #603FEF;
+    outline: none;
+    text-decoration: none;
+}
+
+#containers > div > button:disabled, #containers form button:disabled, #containers nav button:disabled, #containers input[type="file"]:disabled + label {
+    color: rgba(96, 63, 239, 0.6);
+    pointer-events: none;
+}
+
+#containers form button:disabled img {
+    opacity: 0.6;
+}
+
+#containers > div > a:focus-visible, #containers > div > button:focus-visible, #containers form > a:focus-visible, #containers form button:focus-visible, #containers nav button:focus-visible, #containers input[type="file"]:focus-visible + label, #containers nav a:focus-visible, .friends-list div button:focus-visible {
+    background: #EEEBFF;
+}
+
+#containers > div > a:hover, #containers > div > button:hover, #containers form > a:hover, #containers form button:hover, #containers nav button:hover, #containers input[type="file"]:hover + label, #containers nav a:hover, .friends-list div button:hover {
+    background: #EEEBFF;
+}
+
+#containers > div > a:nth-child(1), #containers > div > button:nth-child(1), #containers form > a:nth-child(1), #containers form button:nth-child(1), #containers nav button:nth-child(1), #containers input[type="file"]:nth-child(1) + label, #containers nav a:nth-child(1) {
+    border-top: none;
+}
+
+#containers > div button + div, #containers > div input[type="file"] + div {
+    border-top: 1px solid #CCCCCC;
+}
+
+#containers > div input[type="file"]:disabled {
+    opacity: 0;
+}
+
+#containers input[type="file"] {
+    left: 0px;
+    opacity: 0;
+    outline: none;
+    pointer-events: none;
+    position: absolute;
+}
+
+#containers input[type="file"] + label {
+    box-sizing: border-box;
+}
+
+#containers > div > a, #containers form > a, #containers nav a {
+    display: block;
+    box-sizing: border-box;
+}
+
+#containers fieldset {
+    border: none;
+    margin: 0px;
+    padding: 0px 16px;
+    text-align: left;
+}
+
+#containers fieldset + button {
+    margin-top: 16px;
+}
+
+#containers fieldset + fieldset {
+    border-top: 1px solid #CCCCCC;
+    margin-top: 16px;
+}
+
+#containers h3, #containers img, #containers p, #containers > div a {
+    font-family: "Jost";
+    font-weight: 400;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    word-break: break-word;
+}
+
+#containers img, #containers p, #containers > div a {
+    font-size: 20px;
+}
+
+#containers h3, #containers p, #containers > div a {
+    margin: 0px 16px;
+}
+
+#containers > div a {
+    color: #603FEF;
+    outline: none;
+    text-decoration: none;
+}
+
+#containers > div a:focus-visible {
+    text-decoration: underline;
+}
+
+#containers > div a:hover {
+    text-decoration: underline;
+}
+
+#containers > div > a, #containers form > a {
+    text-decoration: none !important;
+}
+
+#containers p + a, #containers p + button {
+    margin-top: 16px;
+}
+
+#containers h3 {
+    color: #272727;
+    font-size: 28px;
+}
+
+#containers h3:nth-child(1) {
+    margin-top: 16px;
+}
+
+#containers p {
+    color: #525252;
+}
+
+#containers input, .StripeElement, #containers textarea, #containers .drop-down-list select, #letters-toolbar-buttons + div div input[type="text"] {
+    background: #FEFEFE;
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    transition: border 0.2s;
+}
+
+#containers input, #containers textarea, #containers .drop-down-list select, #letters-toolbar-buttons + div div input[type="text"] {
+    box-sizing: border-box;
+    color: #272727;
+    font-family: "Jost";
+    font-size: 18px;
+    font-weight: 400;
+    -webkit-filter: none;
+    filter: none;
+    line-height: 30px;
+    margin: 0px;
+    outline: none;
+    width: 100%;
+}
+
+#containers input, .StripeElement, #containers textarea, #letters-toolbar-buttons + div div input[type="text"] {
+    padding: 10px;
+}
+
+#containers input:disabled, #containers textarea:disabled, #containers .drop-down-list select:disabled,  #letters-toolbar-buttons + div div input[type="text"]:disabled  {
+    opacity: 0.7;
+    pointer-events: none;
+    -webkit-text-fill-color: rgba(39, 39, 39, 0.7);
+}
+
+#containers .counter input:disabled {
+    opacity: 1;
+    -webkit-text-fill-color: #272727;
+}
+
+#containers input:focus, .StripeElement--focus, #containers textarea:focus {
+    border: 1px solid #603FEF;
+}
+
+#containers textarea {
+    height: 156px;
+    resize: none;
+}
+
+#containers .drop-down-list {
+    position: relative;
+}
+
+#containers .drop-down-list:before {
+    background: #FFFFFF;
+    content: "";
+    height: 50px;
+    position: absolute;
+    right: 4px;
+    top: 1px;
+    width: 44px;
+}
+
+#containers .drop-down-list:after {
+    background: url("./public/assets/images/purple-down-arrow.png");
+    background-size: cover;
+    content: "";
+    height: 18px;
+    position: absolute;
+    right: 16px;
+    top: 19px;
+    width: 18px;
+}
+
+#containers .drop-down-list select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+    height: 52px;
+    overflow: hidden;
+    padding: 10px 48px 10px 10px;
+    text-overflow: ellipsis;
+}
+
+#containers .drop-down-list select:hover {
+    border: 1px solid #603FEF;
+}
+
+#containers .drop-down-list select:focus-visible {
+    border: 1px solid #603FEF;
+}
+
+#containers .counter {
+    display: flex;
+}
+
+#containers .counter * {
+    flex-grow: 1;
+    flex-basis: 0px;
+}
+
+#containers .counter input {
+    border-radius: 0px;
+    text-align: center;
+}
+
+#containers .counter button {
+    border: 1px solid #CCCCCC !important;
+}
+
+#containers .counter button:nth-child(1) {
+    border-radius: 4px 0px 0px 4px;
+    border-right: none !important;
+}
+
+#containers .counter button:nth-child(3) {
+    border-radius: 0px 4px 4px 0px;
+    border-left: none !important;
+}
+
+#containers .counter button img {
+    height: 12px;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    width: auto;
+}
+
+#containers input:-webkit-autofill {
+    box-shadow: 0 0 0px 26px #FFFFFF inset;
+}
+
+#containers input:-webkit-autofill::first-line {
+    font-family: "Jost";
+    font-size: 18px;
+    font-weight: 400;
+}
+
+#containers input[type="password"] {
+    font-family: "Password";
+    font-size: 24px;
+    height: 52px;
+    padding-top: 12px;
+    letter-spacing: 2px;
+}
+
+#containers input[type="password"]:-webkit-autofill::first-line {
+    font-family: "Password";
+    font-size: 24px;
+    font-weight: normal;
+}
+
+@-moz-document url-prefix() {
+    #containers input[type="password"] {
+        height: initial;
+        padding-top: 10px;
+    }
+}
+
+#register-form-first-step-date-of-birth-input-field::-webkit-input-placeholder, #coins-purchase-form-card-expiration-date-input-field::-webkit-input-placeholder {
+    color: #000000;
+}
+
+#register-form-first-step-date-of-birth-input-field::-moz-placeholder, #coins-purchase-form-card-expiration-date-input-field::-moz-placeholder {
+    color: #000000;
+}
+
+#register-form-first-step-date-of-birth-input-field:-ms-input-placeholder, #coins-purchase-form-card-expiration-date-input-field:-ms-input-placeholder {
+    color: #000000;
+}
+
+#register-form-first-step-date-of-birth-input-field::-ms-input-placeholder, #coins-purchase-form-card-expiration-date-input-field::-ms-input-placeholder {
+    color: #000000;
+}
+
+#register-form-first-step-date-of-birth-input-field::placeholder, #coins-purchase-form-card-expiration-date-input-field::placeholder {
+    color: #000000;
+}
+
+#containers .checkbox-container {
+    display: block;
+    font-size: 18px;
+    margin-top: 20px;
+    pointer-events: none;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#containers fieldset .checkbox-container + .checkbox-container {
+    margin-top: 10px;
+}
+
+#containers form a + .checkbox-container, #containers form p + .checkbox-container {
+    margin-top: 16px;
+}
+
+#containers .friends-list .checkbox-container {
+    margin: 0px !important;
+}
+
+#containers .checkbox-container input[type=checkbox] {
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: auto;
+    position: absolute;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#containers fieldset .checkbox-container input[type="checkbox"] {
+    height: 19px;
+    top: 3px;
+    width: 19px;
+}
+
+#containers .friends-list .checkbox-container input[type="checkbox"] {
+    height: 100%;
+    left: 0px;
+    top: 0px;
+}
+
+#containers .friends-list .checkbox-container input[type="checkbox"] + span {
+    transition: background 0.2s;
+}
+
+#containers fieldset .checkbox-container input[type=checkbox]:checked + span img {
+    top: 1px;
+}
+
+#containers .friends-list .checkbox-container input[type=checkbox]:checked + span span:nth-child(1) {
+    background: url("./public/assets/images/profile-photo-check-icon.jpg") !important;
+    background-size: cover !important;
+}
+
+#containers fieldset .checkbox-container input[type=checkbox]:disabled {
+    cursor: auto;
+}
+
+#containers fieldset .checkbox-container input[type=checkbox]:disabled + span {
+    opacity: 0.5;
+}
+
+#containers fieldset .checkbox-container input[type=checkbox]:focus-visible + span {
+    border: 1px solid #603FEF;
+}
+
+#containers .friends-list .checkbox-container input[type=checkbox]:focus-visible + span {
+    background: #EEEBFF;
+}
+
+#containers .friends-list .checkbox-container input[type=checkbox]:hover + span {
+    background: #EEEBFF;
+}
+
+#containers fieldset .checkbox-container span {
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    display: inline-block;
+    cursor: pointer;
+    height: 17px;
+    line-height: 0px;
+    margin-right: 8px;
+    overflow: hidden;
+    position: relative;
+    top: 3px;
+    transition: border 0.2s, opacity 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: 17px;
+}
+
+#containers fieldset .checkbox-container span img {
+    height: 11px;
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+    margin: 3px;
+    position: relative;
+    top: 18px;
+    transition: top 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    width: auto;
+}
+
+#containers label, #containers form a, #containers form p, #letters-toolbar-buttons + div div label {
+    font-family: "Jost";
+    font-weight: 400;
+    pointer-events: auto;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    word-break: break-word;
+}
+
+#containers label, #letters-toolbar-buttons + div div label {
+    color: #444444;
+    display: block;
+    font-size: 18px;
+    margin-bottom: 4px;
+    margin-top: 16px;
+}
+
+#containers label:nth-child(1), #letters-toolbar-buttons + div div label:nth-child(1) {
+    margin-top: 12px;
+}
+
+#containers label img {
+    height: 16px;
+    margin-right: 6px;
+    position: relative;
+    top: 2px;
+    width: auto;
+}
+
+#containers .checkbox-container:nth-child(1) {
+    margin-top: 20px;
+}
+
+#containers form a, #containers form p {
+    font-size: 16px;
+    margin: 0px;
+}
+
+#containers form fieldset > a {
+    display: block;
+}
+
+#containers form p {
+    color: #666666;
+}
+
+#containers form input + a, #containers form input + p, #containers form textarea + a, #containers form textarea + p, #containers form .drop-down-list + a, #containers form .drop-down-list select + p, #containers form .counter + a, #containers form .counter + p {
+    margin-top: 12px;
+}
+
+#containers form a + a, #containers form a + p, #containers form p + a, #containers form p + p {
+    margin-top: 4px;
+}
+
+#containers > div > div + button, #containers > div > div + form {
+    border-top: 1px solid #CCCCCC;
+    margin-top: 16px;
+}
+
+.profile-photo-header {
+    padding: 24px;
+}
+
+#containers > div > .profile-photo-header + button {
+    margin-top: 0px;
+}
+
+.profile-photo-header img {
+    border-radius: 50%;
+    height: 128px;
+    transition: -webkit-filter 0.2s;
+    transition: filter 0.2s;
+    transition: filter 0.2s, -webkit-filter 0.2s;
+    vertical-align: top;
+    width: auto;
+}
+
+#profile-menu-update-profile-photo-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    padding: 0px;
+}
+
+#profile-menu-update-profile-photo-button:focus-visible img {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+}
+
+#profile-menu-update-profile-photo-button:hover img {
+    -webkit-filter: brightness(80%);
+    filter: brightness(80%);
+}
+
+#containers > div > #profile-photo-editor-canvas + button {
+    margin-top: 0px;
+}
+
+#containers > .friends-list > div + button {
+    border-top: none;
+    margin-top: 0px;
+}
+
+.friends-list > div, #books-review-form > div {
+    border-bottom: 1px solid #CCCCCC;
+    box-sizing: border-box;
+}
+
+.friends-list > div {
+    max-height: 335px;
+}
+
+.friends-list button + div {
+    max-height: 336px;
+}
+
+.friends-list div::-webkit-scrollbar, #books-review-form > div::-webkit-scrollbar {
+    display: none;
+}
+
+.friends-list div button, .friends-list div .checkbox-container, #books-review-form > div .simplebar-content > div {
+    border-bottom: 1px solid #CCCCCC;
+    border-top: none;
+    line-height: 42px;
+    text-align: left;
+}
+
+.friends-list div button, .friends-list div .checkbox-container > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.friends-list div .checkbox-container > span {
+    display: block;
+    height: 100%;
+    padding: 12px;
+}
+
+.friends-list div button:last-child, .friends-list div .checkbox-container:last-child, #books-review-form > div .simplebar-content > div:last-child {
+    border-bottom: none;
+}
+
+.friends-list div button[data-are-friends="false"], #books-review-form > div .simplebar-content > div {
+    color: #525252;
+}
+
+.friends-list div .checkbox-container span span:nth-child(2) {
+    color: #603FEF;
+}
+
+.friends-list div button img, .friends-list div .checkbox-container span span:nth-child(1), #books-review-form > div .simplebar-content > div > img {
+    border-radius: 50%;
+    height: 42px;
+    margin-right: 12px;
+    vertical-align: top;
+    width: 42px;
+}
+
+.friends-list div button img, #books-review-form > div .simplebar-content > div img {
+    transform: translateZ(0px);
+}
+
+.friends-list div .checkbox-container span span:nth-child(1) {
+    background-size: cover !important;
+    display: inline-block;
+}
+
+.friends-list div p {
+    margin-bottom: 16px !important;
+}
+
+.spinner {
+    background: #E6E6E6;
+    padding: 24px;
+}
+
+.spinner img {
+    display: block;
+    height: 42px;
+    margin: auto;
+    width: auto;
+}
+
+#message-screen {
+    background: #FFFFFF;
+    box-sizing: border-box;
+    display: table;
+    height: 100%;
+    padding: 32px;
+    width: 100%;
+}
+
+#message-container {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#message-text {
+    text-align: center;
+}
+
+#message-text a, #message-text img, #message-text p {
+    font-family: "Jost";
+    font-weight: 400;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    word-break: break-word;
+}
+
+#message-text a, #message-text img, #message-text p {
+    font-size: 24px;
+}
+
+#message-text img, #message-text p {
+    color: #525252;
+}
+
+#message-text img {
+    height: 96px;
+    margin: 16px;
+    width: auto;
+}
+
+#message-text a, #message-text p {
+    margin: 0px;
+}
+
+#message-text a {
+    color: #603FEF;
+    outline: none;
+    text-decoration: none;
+}
+
+#message-text a:focus-visible {
+    text-decoration: underline;
+}
+
+#message-text a:hover {
+    text-decoration: underline;
+}
+
+span.bold {
+    font-weight: 500;
+}
+
+span.revamle {
+    color: #603FEF;
+    font-weight: 500;
+}
+
+span.letters {
+    color: #4A4687;
+    font-weight: 500;
+}
+
+span.books {
+    color: #4D5BB5;
+    font-weight: 500;
+}
+
+span.magic {
+    background: -webkit-linear-gradient(#F25E88, #4A4688);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+h3 span.revamle, h3 span.letters, h3 span.books, h3 span.magic {
+    font-weight: 400;
+}
+
+@media screen and (max-width: 1024px) {
+    #containers .counter {
+        display: block
+    }
+
+    #containers .counter button:nth-child(1) {
+        border-bottom: none !important;
+        border-radius: 4px 4px 0px 0px;
+        border-right: 1px solid #CCCCCC !important;
+    }
+
+    #containers .counter button:nth-child(3) {
+        border-left: 1px solid #CCCCCC !important;
+        border-radius: 0px 0px 4px 4px;
+        border-top: none !important;
+    }
+}

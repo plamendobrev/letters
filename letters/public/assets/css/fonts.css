@@ -1,0 +1,95 @@
+@font-face {
+    font-display: swap;
+    font-family: "Besley";
+    font-style: normal;
+    font-weight: 400;
+    src: url("https://indestructibletype.com/fonts/Besley-Book.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Besley";
+    font-style: italic;
+    font-weight: 400;
+    src: url("https://indestructibletype.com/fonts/Besley-BookItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Besley";
+    font-style: normal;
+    font-weight: 500;
+    src: url("https://indestructibletype.com/fonts/Besley-Medium.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Besley";
+    font-style: italic;
+    font-weight: 500;
+    src: url("https://indestructibletype.com/fonts/Besley-MediumItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Besley";
+    font-style: normal;
+    font-weight: 600;
+    src: url("https://indestructibletype.com/fonts/Besley-Semi.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Besley";
+    font-style: italic;
+    font-weight: 600;
+    src: url("https://indestructibletype.com/fonts/Besley-SemiItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Besley";
+    font-style: normal;
+    font-weight: 700;
+    src: url("https://indestructibletype.com/fonts/Besley-Bold.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Besley";
+    font-style: italic;
+    font-weight: 700;
+    src: url("https://indestructibletype.com/fonts/Besley-BoldItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Besley";
+    font-style: normal;
+    font-weight: 800;
+    src: url("https://indestructibletype.com/fonts/Besley-Heavy.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Besley";
+    font-style: italic;
+    font-weight: 800;
+    src: url("https://indestructibletype.com/fonts/Besley-HeavyItalic.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Besley";
+    font-style: normal;
+    font-weight: 900;
+    src: url("https://indestructibletype.com/fonts/Besley-Fatface.woff2") format("woff2");
+}
+
+@font-face {
+    font-display: swap;
+    font-family: "Besley";
+    font-style: italic;
+    font-weight: 900;
+    src: url("https://indestructibletype.com/fonts/Besley-FatfaceItalic.woff2") format("woff2");
+}

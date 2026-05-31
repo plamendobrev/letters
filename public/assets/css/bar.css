@@ -1,0 +1,57 @@
+#bar {
+    align-items: center;
+    -webkit-backdrop-filter: blur(16px);
+    backdrop-filter: blur(16px);
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    min-width: 256px;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    z-index: 1;
+}
+
+#bar a, #bar button {
+    outline: none;
+    padding: 15px 10px;
+}
+
+#bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#bar a img, #bar button img {
+    color: #FFFFFF;
+    display: block;
+    font-family: "Jost";
+    font-size: 18px;
+    font-weight: 400;
+    height: 30px;
+    margin: auto;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    width: auto;
+}
+
+#bar a:focus-visible img, #bar button:focus-visible img {
+    opacity: 1;
+}
+
+#bar a:hover img, #bar button:hover img {
+    opacity: 1;
+}
+
+#bar + #curtain + * {
+    margin-top: 76px;
+}
+
+#bar + #curtain + main {
+    margin-top: 60px;
+}

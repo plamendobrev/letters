@@ -1,0 +1,497 @@
+.message img {
+    height: 96px;
+    margin: 16px 8px !important;
+    width: auto;
+}
+
+#books-development-article section figure img {
+    height: 96px;
+    width: auto;
+}
+
+#letters-development-article section figure img {
+    height: 96px;
+    width: auto;
+}
+
+#letters-learn-more-article section {
+    padding: 32px 0px;
+}
+
+#letters-learn-more-article section a, #letters-learn-more-article section h3, #letters-learn-more-article section p {
+    font-family: "Besley";
+}
+
+#letters-learn-more-article section h3 {
+    font-size: 40px;
+    margin: 0px 64px;
+}
+
+#letters-learn-more-article section h3 span.letters, #letters-learn-more-article section h3 span.books, #letters-learn-more-article section h3 span.magic {
+    font-weight: 500;
+}
+
+#letters-learn-more-article section a, #letters-learn-more-article section p {
+    font-size: 22px;
+}
+
+#letters-learn-more-article section p {
+    margin: 0px 64px;
+}
+
+#letters-learn-more-article section figure {
+    margin: 0px;
+}
+
+#letters-learn-more-article section:nth-child(1), #letters-learn-more-article section:nth-child(3) {
+    padding: 32px 16px;
+}
+
+#letters-learn-more-article section:nth-child(1) h3, #letters-learn-more-article section:nth-child(1) p, #letters-learn-more-article section:nth-child(3) h3, #letters-learn-more-article section:nth-child(3) p {
+    margin: 0px 48px;
+}
+
+#letters-learn-more-article section:nth-child(6) h3, #letters-learn-more-article section:nth-child(6) p, #letters-learn-more-article section:nth-child(7) h3, #letters-learn-more-article section:nth-child(7) p {
+    margin: 0px;
+}
+
+#letters-learn-more-article section:nth-child(1) figure img {
+    height: auto;
+    margin: 24px 0px;
+    max-width: 768px;
+    width: 100%;
+}
+
+#letters-learn-more-article section:nth-child(2) figure img {
+    height: auto;
+    margin: 8px 0px;
+    max-width: 768px;
+    width: 100%;
+}
+
+#letters-learn-more-article section:nth-child(3) figure video {
+    height: auto;
+    margin: 24px 0px;
+    max-width: 768px;
+    width: 100%;
+}
+
+#letters-learn-more-article section:nth-child(4) figure video {
+    height: auto;
+    margin: 24px 0px;
+    max-width: 1024px;
+    width: 100%;
+}
+
+#letters-learn-more-article section:nth-child(5) figure img {
+    height: auto;
+    margin: 8px 0px;
+    max-width: 768px;
+    width: 100%;
+}
+
+#letters-learn-more-article section:nth-child(6), #letters-learn-more-article section:nth-child(7) {
+    padding: 32px 64px;
+}
+
+#letters-learn-more-article section:nth-child(6) figure {
+    margin: 24px 0px;
+}
+
+#letters-learn-more-article section:nth-child(6) figure img {
+    height: 96px;
+    width: auto;
+}
+
+#letters-learn-more-article section:nth-child(7) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#letters-learn-more-article section:nth-child(7) div {
+    margin: 0px;
+}
+
+#letters-learn-more-article section:nth-child(7) figure {
+    background: url("./letters/public/assets/images/pink-blob.svg");
+    background-repeat: no-repeat;
+    background-size: 325px;
+    margin-left: 32px;
+}
+
+#letters-learn-more-article section:nth-child(7) figure img {
+    height: 256px;
+    margin: 0px;
+    width: auto;
+}
+
+#books-learn-more-article section a, #books-learn-more-article section h3, #books-learn-more-article section p {
+    font-family: "Besley";
+}
+
+#books-learn-more-article section h3 {
+    font-size: 40px;
+}
+
+#books-learn-more-article section h3 span.letters {
+    font-weight: 500;
+}
+
+#books-learn-more-article section a, #books-learn-more-article section p {
+    font-size: 22px;
+}
+
+#books-learn-more-article section:nth-child(1) figure, #books-learn-more-article section:nth-child(2) figure {
+    margin: 0px;
+}
+
+#books-learn-more-article section:nth-child(1) {
+    padding: 32px 0px;
+}
+
+#books-learn-more-article section:nth-child(1) figure video {
+    height: auto;
+    margin: 24px 0px;
+    max-width: 1024px;
+    width: 100%;
+}
+
+#books-learn-more-article section:nth-child(1) p {
+    padding: 0px 64px;
+}
+
+#books-learn-more-article section:nth-child(2) {
+    padding: 32px 16px;
+}
+
+#books-learn-more-article section:nth-child(2) figure img {
+    height: auto;
+    margin: 24px 0px;
+    max-width: 768px;
+    width: 100%;
+}
+
+#books-learn-more-article section:nth-child(2) h3, #books-learn-more-article section:nth-child(2) p {
+    padding: 0px 48px;
+}
+
+#books-learn-more-article section:nth-child(3) figure img {
+    height: 96px;
+    width: auto;
+}
+
+#books-learn-more-article section:nth-child(4), #books-learn-more-article section:nth-child(5), #books-learn-more-article section:nth-child(6), #books-learn-more-article section:nth-child(7) {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#books-learn-more-article section:nth-child(4) figure, #books-learn-more-article section:nth-child(6) figure {
+    margin-left: 32px;
+}
+
+#books-learn-more-article section:nth-child(5) figure, #books-learn-more-article section:nth-child(7) figure {
+    margin-right: 32px;
+}
+
+#books-learn-more-article section:nth-child(4) div, #books-learn-more-article section:nth-child(5) div, #books-learn-more-article section:nth-child(6) div, #books-learn-more-article section:nth-child(7) div {
+    margin: 0px;
+}
+
+#books-learn-more-article section:nth-child(4) figure img, #books-learn-more-article section:nth-child(5) figure img, #books-learn-more-article section:nth-child(6) figure img, #books-learn-more-article section:nth-child(7) figure img {
+    height: 256px;
+    margin: 0px;
+    width: auto;
+}
+
+#books-learn-more-article section:nth-child(4) figure {
+    background: url("./books/public/assets/images/orange-blob.svg");
+    background-repeat: no-repeat;
+    background-size: 302px;
+}
+
+#books-learn-more-article section:nth-child(5) figure {
+    background: url("./books/public/assets/images/green-blob.svg");
+    background-repeat: no-repeat;
+    background-size: 316px;
+}
+
+#books-learn-more-article section:nth-child(6) figure {
+    background: url("./books/public/assets/images/dark-blue-blob.svg");
+    background-repeat: no-repeat;
+    background-size: 357px;
+}
+
+#books-learn-more-article section:nth-child(7) figure {
+    background: url("./books/public/assets/images/red-blob.svg");
+    background-repeat: no-repeat;
+    background-size: 307px;
+}
+
+#regions-list-article section:nth-child(7) figure img {
+    height: 96px;
+    width: auto;
+}
+
+.books-store-section {
+    display: grid;
+    grid-gap: 32px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-rows: -webkit-min-content;
+    grid-template-rows: min-content;
+}
+
+.books-store-section > h3 {
+    grid-column-end: -1;
+    grid-column-start: 1;
+}
+
+#book-of-the-day-section {
+    overflow: auto;
+}
+
+#book-of-the-day-section div {
+    max-width: none;
+}
+
+#books-author-benefits-article section {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#books-author-benefits-article section div {
+    margin: 0px;
+}
+
+#books-author-benefits-article section figure {
+    margin: 0px;
+}
+
+#books-author-benefits-article section:nth-child(odd) figure {
+    margin-left: 32px;
+}
+
+#books-author-benefits-article section:nth-child(even) figure {
+    margin-right: 32px;
+}
+
+#books-author-benefits-article section:nth-child(1) figure {
+    background: url("./books/public/assets/images/yellow-blob.svg");
+    background-repeat: no-repeat;
+    background-size: 332px;
+}
+
+#books-author-benefits-article section:nth-child(2) figure {
+    background: url("./books/public/assets/images/pink-blob.svg");
+    background-repeat: no-repeat;
+    background-size: 324px;
+}
+
+#books-author-benefits-article section:nth-child(3) figure {
+    background: url("./books/public/assets/images/light-blue-blob.svg");
+    background-repeat: no-repeat;
+    background-size: 291px;
+}
+
+#books-author-benefits-article section:nth-child(4) figure {
+    background: url("./books/public/assets/images/purple-blob.svg");
+    background-repeat: no-repeat;
+    background-size: 287px;
+}
+
+#books-author-benefits-article section figure img {
+    height: 256px;
+    margin: 0px;
+    width: auto;
+}
+
+main {
+    background: #E6E6E6;
+    padding: 16px;
+}
+
+main article + article, main article section + section {
+    margin-top: 16px
+}
+
+main article section, .message {
+    background: #FFFFFF;
+    border-radius: 8px;
+    padding: 32px 64px;
+    text-align: center;
+}
+
+main article section > *:nth-child(1) {
+    margin-top: 0px;
+}
+
+main article section > *:last-child {
+    margin-bottom: 0px;
+}
+
+main article section a, main article section figure img, main article section h3, main article section p, .message img, .message p {
+    font-family: "Jost";
+    font-weight: 400;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    word-break: break-word;
+}
+
+main article section a, main article section figure img, main article section p, .message img, .message p {
+    font-size: 24px;
+}
+
+main article section a, main article section h3, main article section p, .message p {
+    margin: 0px;
+}
+
+main article section a {
+    color: #603FEF;
+    outline: none;
+    text-decoration: none;
+}
+
+main article section > a + a {
+    margin-left: 24px;
+}
+
+main article section a:focus-visible {
+    text-decoration: underline;
+}
+
+main article section a:hover {
+    text-decoration: underline;
+}
+
+main article section div {
+    margin: auto;
+    max-width: 1024px;
+    text-align: left;
+}
+
+main article section figure {
+    margin: 8px 0px;
+}
+
+main article section figure + figure, main article section figure + figure img, main article section figure + figure video {
+    margin-top: 0px;
+}
+
+main article section figure img, main article section figure video, .message img {
+    vertical-align: top;
+}
+
+main article section figure img, .message img {
+    margin: 8px;
+}
+
+main article section figure video {
+    -moz-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(#FFFFFF, #000000);
+}
+
+main article section figure + figure video {
+    border: none;
+}
+
+main article section h3 {
+    color: #272727;
+    font-size: 48px;
+}
+
+main article section p, .message p {
+    color: #525252;
+}
+
+main article section ul {
+    -moz-column-count: 3;
+    column-count: 3;
+    list-style-type: none;
+    margin: 0px;
+    padding-left: 0px;
+}
+
+.message {
+    box-shadow: 24px 0px 0px 0px #E6E6E6, 24px -16px 0px 0px #E6E6E6, -24px -16px 0px 0px #E6E6E6, -24px 0px 0px 0px #E6E6E6;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-top: 16px;
+}
+
+.message + footer {
+    border-top: 16px solid #E6E6E6;
+}
+
+@media screen and (max-width: 1024px) {
+    main article section ul {
+        -moz-column-count: auto;
+        column-count: auto;
+    }
+
+    #letters-learn-more-article section:nth-child(7), #books-author-benefits-article section:nth-child(odd), #books-learn-more-article section:nth-child(4), #books-learn-more-article section:nth-child(6) {
+        flex-direction: column;
+    }
+
+    #books-author-benefits-article section:nth-child(even), #books-learn-more-article section:nth-child(5), #books-learn-more-article section:nth-child(7) {
+        flex-direction: column-reverse;
+    }
+
+    #books-learn-more-article section:nth-child(7) div h3, #books-learn-more-article section:nth-child(7) div a {
+        text-align: center;
+    }
+
+    #books-learn-more-article section:nth-child(7) div a {
+        display: block;
+    }
+
+    #letters-learn-more-article section:nth-child(7) figure, #books-learn-more-article section:nth-child(4) figure, #books-learn-more-article section:nth-child(5) figure, #books-learn-more-article section:nth-child(6) figure, #books-learn-more-article section:nth-child(7) figure, #books-author-benefits-article section figure {
+        margin: 8px 0px !important;
+    }
+}
+
+@media screen and (max-width: 512px) {
+    #letters-learn-more-article section:nth-child(7) figure img, #books-learn-more-article section:nth-child(4) figure img, #books-learn-more-article section:nth-child(5) figure img, #books-learn-more-article section:nth-child(6) figure img, #books-learn-more-article section:nth-child(7) figure img, #books-author-benefits-article section figure img {
+        height: 128px;
+    }
+
+    #letters-learn-more-article section:nth-child(7) figure {
+        background-size: 162px;
+    }
+
+    #books-author-benefits-article section:nth-child(1) figure {
+        background-size: 166px;
+    }
+
+    #books-author-benefits-article section:nth-child(2) figure {
+        background-size: 162px;
+    }
+
+    #books-author-benefits-article section:nth-child(3) figure {
+        background-size: 145px;
+    }
+
+    #books-author-benefits-article section:nth-child(4) figure {
+        background-size: 143px;
+    }
+
+    #books-learn-more-article section:nth-child(4) figure {
+        background-size: 151px;
+    }
+
+    #books-learn-more-article section:nth-child(5) figure {
+        background-size: 158px;
+    }
+
+    #books-learn-more-article section:nth-child(6) figure {
+        background-size: 178px;
+    }
+
+    #books-learn-more-article section:nth-child(7) figure {
+        background-size: 153px;
+    }
+}
