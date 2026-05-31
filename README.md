@@ -2,7 +2,7 @@
 
 **Letters** was an ambitious project aimed at creating a free platform where writers could write, publish, distribute, and even sell their books.
 
-The idea was born shortly after I abandoned my previous project in early 2021. My first attempt was a conceptual Electron application that never progressed very far. By the end of 2021, however, I had completed much of the server-side infrastructure and began building what would become the actual **Letters** editor throughout 2022, when I was 17 years old.
+The idea was born shortly after I abandoned my previous project in early 2021. My first attempt was a conceptual **Electron** application that never progressed very far. By the end of 2021, however, I had completed much of the server-side infrastructure and began building what would become the actual **Letters** editor throughout 2022, when I was 17 years old.
 
 ## What This Repository Actually Contains
 
